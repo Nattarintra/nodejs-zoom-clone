@@ -26,7 +26,12 @@ io.on('connection',socket => {
     //console.log('Joined room');
     socket.join(roomId); // now join the room
     socket.broadcast.to(roomId).emit('user-connected', userId); 
-    //socket.to(roomId).broadcast.emit('user-connected'); // not working
+    // liesten for the message it will recieve msg from input
+    socket.on('message', message => {
+      // Send msg to roomId 
+      io.to(roomId).emit('createMessage',message);
+    })
+    
    // socket.to(roomId).emit('user-connected'); // alternative 
     
   })

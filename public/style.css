@@ -93,10 +93,10 @@ video{
   overflow-y: auto;
 }
 
-/* .messages{
+.messages{
   color: white;
   list-style: none;
-} */
+}
 
 .main__message_container {
   padding: 22px 12px;
