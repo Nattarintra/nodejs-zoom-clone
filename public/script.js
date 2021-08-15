@@ -1,3 +1,5 @@
+const { text } = require("body-parser");
+
 const socket = io('/');
 const videoGrid = document.getElementById('video-grid');
 const myVideo = document.createElement('video');
@@ -66,3 +68,4 @@ const addVideoStream = (video, stream) => {
   })
  videoGrid.append(video);
 }
+
